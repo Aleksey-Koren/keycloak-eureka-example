@@ -1,0 +1,14 @@
+server:
+  port: ${SERVER_PORT:8081}
+spring:
+  application.name: ${APPLICATION_NAME:protected-service}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/auth/realms/Korneev_Realm
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:8761/eureka/
